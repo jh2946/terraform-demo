@@ -66,7 +66,21 @@ DB_PASSWORD='' # enter your database password here
 
 ## Deploying local (sqlite + S3)
 
-Create an S3 bucket in your AWS account.
+Create an S3 bucket in your AWS account. Ensure that it has all block public access options unchecked, and has the following bucket policy:
+
+```
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "s3:GetObject",
+      "Resource": "${aws_s3_bucket.bucket.arn}/*"
+    }
+  ]
+}
+```
 
 The rest is the same as above, but modify `.env` as follows before building:
 
@@ -83,7 +97,21 @@ S3_BUCKET='example-bucket-0123456789' # enter the name of your S3 bucket here
 
 ## Deploying local (MySQL + S3)
 
-Create an S3 bucket in your AWS account.
+Create an S3 bucket in your AWS account. Ensure that it has all block public access options unchecked, and has the following bucket policy:
+
+```
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "s3:GetObject",
+      "Resource": "${aws_s3_bucket.bucket.arn}/*"
+    }
+  ]
+}
+```
 
 The rest is the same as above, but modify `.env` as follows before building:
 
