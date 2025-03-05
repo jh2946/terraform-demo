@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    background-color: #000000;
+    color: var(--txt);
+    font-family: Tahoma;
+    background-image: url("../static/polygon.png");
+}
+
+div#header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+}
+
+header {
+    display: flex;
+    height: 50px;
+    background: linear-gradient(225deg, #00000080, #10101080 50%, #404040b0 90%, #303030b0 100%);
+    padding: 0 16px;
+    backdrop-filter: blur(5px);
+}
+
+div#header-outline {
+    background: var(--dec);
+    padding-bottom: 5px;
+}
+
+header a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 12px;
+    margin: 0 4px;
+}
+
+header a.right-sep {
+    margin-left: auto;
+}
+
+header a:hover {
+    background-color: var(--hlg);
+}
+
+div#content {
+    padding: 10vh 10vw 5vh 10vw;
+    min-height: 100vh;
+    box-sizing: content-box;
+    width: 60vw;
+    margin: auto;
+    background-color: var(--cnt);
+    text-align: center;
+}
+
+p, li {
+    text-align: justify;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}

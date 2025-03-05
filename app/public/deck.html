@@ -1,0 +1,69 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/style/color.css">
+        <link rel="stylesheet" href="/style/create.css">
+        <link rel="stylesheet" href="/style/main.css">
+        <link rel="stylesheet" href="/style/deck.css">
+        <link rel="stylesheet" href="/style/card.css">
+        <title>DeckRepo</title>
+    </head>
+<body>
+    <div id="header-container">
+        <header>
+            <a href="/"><h2>DeckRepo</h2></a>
+            <a href="/create">Create</a>
+        </header>
+        <div id="header-outline"></div>
+    </div>
+    <div class="fullscreen" id="fullscreen-img-cont">
+        <img id="fullscreen-img">
+        <button class="x" id="x"><img src="static_files/svg/x.svg" alt="escape"></button>
+    </div>
+    <div class="fullscreen" id="fullscreen-form">
+        <button class="x" id="form-x"><img src="static_files/svg/x.svg" alt="escape"></button>
+        <form id="deck-form" action="/deck" method="POST" enctype="multipart/form-data">
+            <fieldset id="form-front">
+                <legend>Front of card:</legend>
+                <label for="file-front">
+                    <div class="dropzone" id="zone-front">
+                        <p class="dropzone-placeholder">Drag and drop image file</p>
+                        <img alt="" class="zone-img">
+                    </div>
+                </label>
+                <input name="file-front" id="file-front" type="file" accept="image/*">
+                <button class="clear-btn" id="clear-front">Clear&nbsp;<img src="static_files/svg/x.svg"></button>
+                <textarea name="text-front" placeholder="Front-of-card text" id="text-front" cols="30" rows="10"></textarea>
+                <input type="button" value="Next >>" id="next-button">
+            </fieldset>
+            <fieldset id="form-back">
+                <legend>Back of card:</legend>
+                <label for="file-back">
+                    <div class="dropzone" id="zone-back">
+                        <p class="dropzone-placeholder">Drag and drop image file</p>
+                        <img alt="" class="zone-img">
+                    </div>
+                </label>
+                <input name="file-back" id="file-back" type="file" accept="image/*">
+                <button class="clear-btn" id="clear-back">Clear&nbsp;<img src="static_files/svg/x.svg"></button>
+                <textarea name="text-back" placeholder="Back-of-card text" id="text-back" cols="30" rows="10"></textarea>
+                <input type="button" value="<< Back" id="back-button">
+            </fieldset>
+            <button id="submit-btn" disabled>Create&nbsp;<img src="static_files/svg/rarrow.svg" alt=""></button>
+        </form>
+    </div>
+    <div id="content">
+        <span id="card-list"></span>
+        <div id="create-card">
+            <div class="card-outer">
+                <div class="card-translucent"><img src="static_files/svg/plus.svg" id="plus" alt="Create card"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script/card.js"></script>
+    <script src="script/deck.js"></script>
+</body>
+</html>

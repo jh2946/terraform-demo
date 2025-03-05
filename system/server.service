@@ -1,0 +1,13 @@
+[Unit]
+Description=DeckRepo
+After=network.target
+
+[Service]
+User=root
+WorkingDirectory=/home/ubuntu/app
+EnvironmentFile=/home/ubuntu/system/environment
+ExecStart=/home/ubuntu/app/venv/bin/python3 /home/ubuntu/app/server.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

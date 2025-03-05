@@ -1,0 +1,17 @@
+:root {
+    --bg0: #181820;
+    --bg1: #202028;
+    --txt: #f0f0f0;
+    --hlg: #80808040;
+    --dec: linear-gradient(to right, #ffff00, #00ffff);
+    --cnt: #00000080;
+}
+
+:root.light {
+    --bg0: #f0f0f0;
+    --bg1: #e0e0e0;
+    --txt: #000000;
+    --hlg: #80808040;
+    --dec: #00b000;
+    --cnt: #f0f0e080;
+}

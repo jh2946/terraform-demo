@@ -1,0 +1,28 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/style/color.css">
+        <link rel="stylesheet" href="/style/main.css">
+        <link rel="stylesheet" href="/style/create.css">
+        <title>DeckRepo - Create deck</title>
+    </head>
+<body>
+    <div id="header-container">
+        <header>
+            <a href="/"><h2>DeckRepo</h2></a>
+            <a href="/create">Create</a>
+        </header>
+        <div id="header-outline"></div>
+    </div>
+    <div id="form-container">
+        <form method="POST" id="form">
+            <input type="text" placeholder="Title" name="title" id="title" required>
+            <textarea name="description" placeholder="Description (optional)" id="description" spellcheck="false"></textarea>
+            <button id="submit-btn">Create&nbsp;<img src="static_files/svg/rarrow.svg" alt=""></button>
+        </form>
+    </div>
+    <script src="script/create.js"></script>
+</body>
+</html>

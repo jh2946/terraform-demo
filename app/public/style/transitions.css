@@ -1,0 +1,24 @@
+.off-screen {
+    opacity: 0 !important;
+}
+
+.on-screen {
+    transition-duration: 1s;
+    transition-delay: 0.3s;
+}
+
+.off-screen.grow {
+    transform: scale(0.9);
+}
+
+.off-screen.slide {
+    transform: translateX(-20px);
+}
+
+.on-screen.fast {
+    transition-duration: 0.7s;
+}
+
+.on-screen.slow {
+    transition-duration: 1.5s;
+}

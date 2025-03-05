@@ -1,0 +1,92 @@
+legend {
+    margin-bottom: 20px;
+}
+
+div#create-card {
+    display: inline-block;
+}
+
+form#deck-form {
+    background-color: #202025;
+    padding: 50px;
+    width: max(40vw, 300px);
+    border-radius: 50px;
+    border: 1px #a0a0a080 solid;
+}
+
+fieldset {
+    border: 0 none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+fieldset#form-back {
+    display: none;
+}
+
+div.dropzone {
+    padding: 30px;
+    background-color: #303038;
+    border-radius: 30px;
+    min-height: 80px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-wrap: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p.dropzone-placeholder {
+    font-size: 1em;
+    color: #808080;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+input[type="button"] {
+    margin: 0;
+    background-color: transparent;
+    font: inherit;
+    color: inherit;
+    border: none;
+}
+
+input[type="button"]#next-button {
+    float: right;
+}
+
+img.zone-img {
+    max-width: 20vw;
+    max-height: 20vh;
+    margin: 0;
+}
+
+button.clear-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: #40101080;
+    font: inherit;
+    font-size: 1.5rem;
+    line-height: 0;
+    color: inherit;
+    cursor: pointer;
+    padding: 10px;
+    border: 3px #802020 solid;
+    border-radius: 20px;
+    height: 50px;
+}
+
+button.clear-btn * {
+    height: 1.5rem;
+}
+
+button.clear-btn img {
+    height: 1rem;
+}
