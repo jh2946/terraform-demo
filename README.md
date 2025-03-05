@@ -3,7 +3,8 @@
 - Python 3.12
 - Terraform 1.11
 - MySQL Server, Router 8.0
-- AWS CLI
+- AWS CLI 2.17
+- Git 2.46 (if cloning this from Github. If you obtained this through zip file, this isn't necessary)
 - AWS Credentials have been set up
 
 Verify the above with the following (Windows):
@@ -11,8 +12,15 @@ Verify the above with the following (Windows):
 ```
 python --version
 terraform --version
-netstat -na | select-string '3306 ' # to ensure mysql is contactable
+netstat -na | select-string '3306 ' # to ensure mysql server is installed and contactable
+git config user.name # to ensure git is installed and credentials are signed in
 aws sts get-caller-identity # to ensure AWS CLI is installed and credentials are signed in
+```
+
+If cloning from Github, run the following in an empty folder (this is not necessary if obtained via zip file):
+
+```
+git clone https://github.com/jh2946/terraform-demo.git .
 ```
 
 Throughout the entire process, do not manually edit any files except for `app/.env`. There should also be no need to edit any files during the full cloud deployment run. If you see any errors, please screenshot, document the steps you took to arrive at the error, and inform me.
