@@ -23,7 +23,7 @@ If cloning from Github, run the following in an empty folder (this is not necess
 git clone https://github.com/jh2946/terraform-demo.git .
 ```
 
-Throughout the entire process, do not manually edit any files except for `app/.env`. There should also be no need to edit any files during the full cloud deployment run. If you see any errors, please screenshot, document the steps you took to arrive at the error, and inform me.
+Throughout the entire process, do not manually edit any files except for `app/.env` (the full cloud deployment run doesn't even depend on `app/.env`). If you see any errors, please screenshot, document the steps you took to arrive at the error, and inform me.
 
 ## Deploying local (sqlite + local disk)
 
