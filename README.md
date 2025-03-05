@@ -111,4 +111,6 @@ terraform init
 terraform apply
 ```
 
-The apply command may take up to 15 minutes. Locate the freshly created EC2 instance in your AWS account and copy the public IP address, then visit `http://<public-ip>` in your browser.
+The apply command may take up to 15 minutes.
+
+Once successful, locate the freshly created EC2 instance in your AWS account and copy the public IP address, then visit `http://<public-ip>` in your browser.
