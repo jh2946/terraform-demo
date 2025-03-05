@@ -69,7 +69,7 @@ resource "aws_security_group" "rds_sg" {
     from_port   = 3306
     to_port     = 3306
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"] # Restrict in production
+    cidr_blocks = ["0.0.0.0/0"]
   }
 }
 
@@ -95,7 +95,7 @@ resource "null_resource" "always_run" {
 }
 
 resource "aws_instance" "ec2" {
-  ami                         = "ami-04b4f1a9cf54c11d0" # Change to latest Amazon Linux
+  ami                         = "ami-04b4f1a9cf54c11d0"
   instance_type               = "t3.micro"
   associate_public_ip_address = true
   vpc_security_group_ids      = [aws_security_group.ec2_sg.id]
