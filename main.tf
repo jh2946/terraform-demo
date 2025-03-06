@@ -88,12 +88,6 @@ resource "local_file" "private_key" {
   filename = "${path.module}/my-key.pem"
 }
 
-resource "null_resource" "always_run" {
-  triggers = {
-    timestamp = "${timestamp()}"
-  }
-}
-
 resource "aws_instance" "ec2" {
   ami                         = "ami-04b4f1a9cf54c11d0"
   instance_type               = "t3.micro"
@@ -135,12 +129,6 @@ resource "aws_instance" "ec2" {
       "sudo systemctl enable server.service",
       "sudo systemctl start server.service",
       "echo 'sudo systemctl start server.service' >> /home/ubuntu/.profile"
-    ]
-  }
-
-  lifecycle {
-    replace_triggered_by = [
-      null_resource.always_run
     ]
   }
 
