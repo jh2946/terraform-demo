@@ -56,8 +56,16 @@ db_url = URL.create(
 app.config['SQLALCHEMY_DATABASE_URI'] = db_url
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
+database_init = """
+CREATE DATABASE IF NOT EXISTS %s;
+USE %s;
+""" % (database, database)
+
 with open('schema.sql', 'r') as f:
-    schema = f.read() % (database, database)
+    if UPLOADS_ENGINE == 'file':
+        schema = f.read()
+    else:
+        schema = database_init + f.read()
     cmds = schema.split(';')
     for cmd in cmds:
         db.session.execute(text(cmd + ';')) if any(c.isalnum() for c in cmd) else None
